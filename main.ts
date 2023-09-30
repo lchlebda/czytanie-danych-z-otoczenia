@@ -1,5 +1,10 @@
-let suma = 0
-let lista: number[] = []
+radio.onReceivedNumber(function (receivedNumber) {
+    serial.writeValue("hałas", receivedNumber)
+    lista.push(receivedNumber)
+    basic.showIcon(IconNames.SmallSquare)
+    basic.pause(500)
+    basic.clearScreen()
+})
 input.onButtonPressed(Button.A, function () {
     suma = 0
     for (let wartość of lista) {
@@ -9,8 +14,9 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(1000)
     basic.clearScreen()
 })
+let suma = 0
+let lista: number[] = []
+radio.setGroup(1)
 basic.forever(function () {
-    serial.writeValue("hałas", input.temperature())
-    lista.push(input.temperature())
-    basic.pause(500)
+	
 })

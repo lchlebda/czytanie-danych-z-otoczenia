@@ -1,5 +1,5 @@
 {
-    "name": "czytanie danych z otoczenia",
+    "name": "czujnik temperatury odbiornik",
     "description": "",
     "dependencies": {
         "core": "*",
